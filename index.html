@@ -409,6 +409,46 @@
     .package-grid.three-col { grid-template-columns: 1fr; }
   }
 
+  /* ============ OTHER SERVICES ============ */
+  .services-section .wrap { max-width: 980px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+    margin-top: 28px;
+  }
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+  .service-card {
+    background: var(--cream-warm);
+    padding: 36px 28px;
+    border: 1px solid rgba(160, 82, 45, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  .service-title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .service-card p {
+    font-size: 14.5px;
+    color: #4a413b;
+  }
+  .service-highlight {
+    background: var(--cream);
+    border-left: 2px solid var(--terracotta);
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: #4a413b;
+    margin-bottom: 20px;
+  }
+  .service-card .btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+  }
+
   /* ============ CONTACT / LINKS (linktree destination) ============ */
   .links-section { text-align: center; }
   .link-stack {
@@ -443,6 +483,12 @@
     font-size: 12px;
     color: var(--grey);
     letter-spacing: 1px;
+  }
+  .footer-disclaimer {
+    max-width: 560px;
+    margin: 0 auto 16px;
+    letter-spacing: 0;
+    line-height: 1.6;
   }
 </style>
 </head>
@@ -626,6 +672,37 @@
   </div>
 </section>
 
+<!-- ============ OTHER SERVICES ============ -->
+<section id="other-services" class="services-section">
+  <div class="wrap">
+    <div class="eyebrow">Beyond 1:1 Coaching</div>
+    <h2>Other Services</h2>
+
+    <p style="max-width: 560px;">Alongside coaching, I support women and international communities in Germany through workshops, speaking engagements, and multilingual ceremonies.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-title">Monthly Workshops</div>
+        <p>Group sessions (2–2.5 hours), online and in Berlin, exploring themes like identity, faith, and intercultural life in community with other women.</p>
+        <div class="service-highlight">📅 Save the date: 'Starting Strong: With the Right Foundation' — January. Email for details and to be added to the list.</div>
+        <a href="mailto:maripilizickler@gmail.com?subject=Workshop%20Interest" class="btn btn-ghost">Details via email</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Speaking &amp; Seminars</div>
+        <p>Keynotes, seminars, and workshop sessions for conferences, churches, and women's events — in English, German, and Spanish.</p>
+        <a href="mailto:maripilizickler@gmail.com?subject=Speaking%20Inquiry" class="btn btn-ghost">Details via email</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-title">Wedding &amp; Memorial Officiant</div>
+        <p>Personal, multilingual ceremonies for couples and families, especially intercultural ones — with faith elements available on request, never required.</p>
+        <a href="mailto:maripilizickler@gmail.com?subject=Officiant%20Inquiry" class="btn btn-ghost">Details via email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONNECT (linktree-style) ============ -->
 <section id="connect" class="links-section">
   <div class="wrap">
@@ -645,6 +722,7 @@
 </section>
 
 <footer>
+  <p class="footer-disclaimer">Coaching is not a substitute for psychotherapy or medical treatment. For concerns beyond the scope of coaching, I refer clients to appropriate professionals.</p>
   PILAR COACHING · BERLIN &amp; ONLINE · © 2026
 </footer>
 

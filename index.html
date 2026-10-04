@@ -482,11 +482,31 @@
     border-color: var(--terracotta);
     background: var(--cream);
   }
-  .lang-flags {
-    margin-top: 40px;
-    font-size: 14px;
-    color: var(--grey);
+  .lang-switch {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 13px;
     letter-spacing: 1px;
+    color: var(--grey);
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: color 0.25s ease;
+  }
+  .lang-btn:hover { color: var(--terracotta); }
+  .lang-btn:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 2px; }
+  .lang-btn.active {
+    color: var(--terracotta);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 5px;
   }
 
   footer {
@@ -510,11 +530,11 @@
   <div class="nav-inner">
     <div class="nav-brand">PILAR</div>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#journey">The Journey</a>
-      <a href="#packages">Packages</a>
-      <a href="#other-services">Other Services</a>
-      <a href="#connect">Connect</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#journey" data-i18n="nav.journey">The Journey</a>
+      <a href="#packages" data-i18n="nav.packages">Packages</a>
+      <a href="#other-services" data-i18n="nav.services">Other Services</a>
+      <a href="#connect" data-i18n="nav.connect">Connect</a>
     </div>
   </div>
 </nav>
@@ -529,50 +549,50 @@
     </div>
   </div>
 
-  <h1 class="headline"><em>Stand</em> firm. <em>Start</em> over.<br><em>Live</em> fully.</h1>
-  <p class="hero-sub">Faith-based life coaching for women navigating life's big transitions, with Maripili Zickler, Berlin & online.</p>
+  <h1 class="headline" data-i18n="hero.headline"><em>Stand</em> firm. <em>Start</em> over.<br><em>Live</em> fully.</h1>
+  <p class="hero-sub" data-i18n="hero.sub">Faith-based life coaching for women navigating life's big transitions, with Maripili Zickler, Berlin & online.</p>
 
   <div class="cta-row">
-    <a href="#packages" class="btn btn-primary">View Coaching Packages</a>
-    <a href="#connect" class="btn btn-ghost">Book a Free Discovery Video Call</a>
+    <a href="#packages" class="btn btn-primary" data-i18n="hero.cta1">View Coaching Packages</a>
+    <a href="#connect" class="btn btn-ghost" data-i18n="cta.discovery">Book a Free Discovery Video Call</a>
   </div>
 
-  <div class="scroll-hint">SCROLL ↓</div>
+  <div class="scroll-hint" data-i18n="hero.scroll">SCROLL ↓</div>
 </div>
 
 <!-- ============ ABOUT ============ -->
 <section id="about">
   <div class="wrap story-block">
-    <div class="eyebrow">About Maripili</div>
-    <h2>A steady presence for women in the middle of change.</h2>
+    <div class="eyebrow" data-i18n="about.eyebrow">About Maripili</div>
+    <h2 data-i18n="about.h2">A steady presence for women in the middle of change.</h2>
 
-    <p class="lead">I know what it feels like to rebuild: not once, but many times. To move across cultures, to hold a family together through change, to ask hard questions about faith and identity, and to keep standing.</p>
+    <p class="lead" data-i18n="about.lead">I know what it feels like to rebuild: not once, but many times. To move across cultures, to hold a family together through change, to ask hard questions about faith and identity, and to keep standing.</p>
 
-    <p>My own path has taken me through relocation, motherhood, and the kind of transitions, turns, and challenges life quietly hands us. Along the way, I found that the moments which felt most disorienting were also the ones that taught me the most about what it means to stand firm, and to begin again.</p>
+    <p data-i18n="about.p1">My own path has taken me through relocation, motherhood, and the kind of transitions, turns, and challenges life quietly hands us. Along the way, I found that the moments which felt most disorienting were also the ones that taught me the most about what it means to stand firm, and to begin again.</p>
 
-    <p>Through every one of those seasons, my faith has been my source of strength: the steady ground beneath the changing landscape, and the reason I trust that transition can lead somewhere good.</p>
+    <p data-i18n="about.p2">Through every one of those seasons, my faith has been my source of strength: the steady ground beneath the changing landscape, and the reason I trust that transition can lead somewhere good.</p>
 
-    <p>That's the work I now do with other women. Not as someone who has it all figured out, but as someone who has walked through real transition and knows how to walk alongside you through yours.</p>
+    <p data-i18n="about.p3">That's the work I now do with other women. Not as someone who has it all figured out, but as someone who has walked through real transition and knows how to walk alongside you through yours.</p>
 
-    <p>PILAR means 'pillar' in Spanish, and it's also my own middle name. Both meanings capture what I hope to offer: steady support to stand on, drawn from my own story.</p>
+    <p data-i18n="about.p4">PILAR means 'pillar' in Spanish, and it's also my own middle name. Both meanings capture what I hope to offer: steady support to stand on, drawn from my own story.</p>
 
     <p class="signature">— Maripili</p>
 
-    <a href="#connect" class="btn btn-ghost" style="display:inline-block; margin-top: 8px;">Book a Free Discovery Video Call</a>
+    <a href="#connect" class="btn btn-ghost" style="display:inline-block; margin-top: 8px;" data-i18n="cta.discovery">Book a Free Discovery Video Call</a>
 
     <div class="credentials">
-      <div class="credentials-label">Training & Background</div>
+      <div class="credentials-label" data-i18n="cred.label">Training & Background</div>
       <div class="cred-list">
-        <span class="cred-pill">DISC Certified Trainer</span>
+        <span class="cred-pill" data-i18n="cred.disc">DISC Certified Trainer</span>
         <span class="cred-pill">Internal Family Systems (IFS)</span>
-        <span class="cred-pill">Pastoral Training</span>
-        <span class="cred-pill">Intercultural Missions Training</span>
-        <span class="cred-pill">Counseling Training</span>
-        <span class="cred-pill">Berlin-based, working internationally</span>
+        <span class="cred-pill" data-i18n="cred.pastoral">Pastoral Training</span>
+        <span class="cred-pill" data-i18n="cred.missions">Intercultural Missions Training</span>
+        <span class="cred-pill" data-i18n="cred.counseling">Counseling Training</span>
+        <span class="cred-pill" data-i18n="cred.berlin">Berlin-based, working internationally</span>
       </div>
 
-      <div class="credentials-label personal-label">Personally</div>
-      <p class="personal-line">Originally from Ecuador · Expat in Germany for over 20 years · Mum of three · In an intercultural marriage · Fluent in Spanish, German & English</p>
+      <div class="credentials-label personal-label" data-i18n="personal.label">Personally</div>
+      <p class="personal-line" data-i18n="personal.line">Originally from Ecuador · Expat in Germany for over 20 years · Mum of three · In an intercultural marriage · Fluent in Spanish, German & English</p>
     </div>
   </div>
 </section>
@@ -580,30 +600,30 @@
 <!-- ============ THE JOURNEY (three phases) ============ -->
 <section id="journey" class="journey-section">
   <div class="wrap">
-    <div class="eyebrow">The PILAR Approach</div>
-    <h2>Three phases. One steady path forward.</h2>
+    <div class="eyebrow" data-i18n="journey.eyebrow">The PILAR Approach</div>
+    <h2 data-i18n="journey.h2">Three phases. One steady path forward.</h2>
 
     <div class="phase">
-      <div class="phase-word">Stand<br>firm</div>
+      <div class="phase-word" data-i18n="ph1.word">Stand<br>firm</div>
       <div>
-        <div class="phase-title">Find your ground</div>
-        <p class="phase-text">Before anything moves forward, we slow down. We name what's actually happening, steady your footing, and reconnect you to what's true about your circumstances, your faith, and yourself.</p>
+        <div class="phase-title" data-i18n="ph1.title">Find your ground</div>
+        <p class="phase-text" data-i18n="ph1.text">Before anything moves forward, we slow down. We name what's actually happening, steady your footing, and reconnect you to what's true about your circumstances, your faith, and yourself.</p>
       </div>
     </div>
 
     <div class="phase">
-      <div class="phase-word">Start<br>over</div>
+      <div class="phase-word" data-i18n="ph2.word">Start<br>over</div>
       <div>
-        <div class="phase-title">(Re)Build with intention</div>
-        <p class="phase-text">This is the active work: reshaping identity, relationships, career, or faith with clarity instead of reacting to circumstance. Change becomes something you're choosing, not just surviving.</p>
+        <div class="phase-title" data-i18n="ph2.title">(Re)Build with intention</div>
+        <p class="phase-text" data-i18n="ph2.text">This is the active work: reshaping identity, relationships, career, or faith with clarity instead of reacting to circumstance. Change becomes something you're choosing, not just surviving.</p>
       </div>
     </div>
 
     <div class="phase">
-      <div class="phase-word">Live<br>fully</div>
+      <div class="phase-word" data-i18n="ph3.word">Live<br>fully</div>
       <div>
-        <div class="phase-title">Step into who you're becoming</div>
-        <p class="phase-text">The goal was never just to cope. It's to live with purpose, freedom, and faith on the other side of transition, fully present in the life you're building.</p>
+        <div class="phase-title" data-i18n="ph3.title">Step into who you're becoming</div>
+        <p class="phase-text" data-i18n="ph3.text">The goal was never just to cope. It's to live with purpose, freedom, and faith on the other side of transition, fully present in the life you're building.</p>
       </div>
     </div>
   </div>
@@ -612,19 +632,19 @@
 <!-- ============ WHO THIS IS FOR ============ -->
 <section id="for">
   <div class="wrap">
-    <div class="eyebrow">Who This Is For</div>
-    <h2>For women navigating life's transitions, challenges & turns.</h2>
-    <p>Life asks us to become someone new more often than we expect. A move, a baby, a loss, a new chapter: each one quietly shifts who you are. You may not have a name for it yet, and you do not need one. If any of this feels familiar, we should talk.</p>
+    <div class="eyebrow" data-i18n="for.eyebrow">Who This Is For</div>
+    <h2 data-i18n="for.h2">For women navigating life's transitions, challenges & turns.</h2>
+    <p data-i18n="for.p">Life asks us to become someone new more often than we expect. A move, a baby, a loss, a new chapter: each one quietly shifts who you are. You may not have a name for it yet, and you do not need one. If any of this feels familiar, we should talk.</p>
 
     <div class="for-grid">
-      <div class="for-item">Starting over in a new country</div>
-      <div class="for-item">Feeling like you do not fully belong anywhere</div>
-      <div class="for-item">Identity shifting through motherhood</div>
-      <div class="for-item">Career change or reinvention</div>
-      <div class="for-item">Re-entry after relocation or time abroad</div>
-      <div class="for-item">Divorce or the end of a relationship</div>
-      <div class="for-item">Intercultural relationships & parenting</div>
-      <div class="for-item">Faith & Purpose</div>
+      <div class="for-item" data-i18n="for.1">Starting over in a new country</div>
+      <div class="for-item" data-i18n="for.2">Feeling like you do not fully belong anywhere</div>
+      <div class="for-item" data-i18n="for.3">Identity shifting through motherhood</div>
+      <div class="for-item" data-i18n="for.4">Career change or reinvention</div>
+      <div class="for-item" data-i18n="for.5">Re-entry after relocation or time abroad</div>
+      <div class="for-item" data-i18n="for.6">Divorce or the end of a relationship</div>
+      <div class="for-item" data-i18n="for.7">Intercultural relationships & parenting</div>
+      <div class="for-item" data-i18n="for.8">Faith & Purpose</div>
     </div>
   </div>
 </section>
@@ -632,56 +652,56 @@
 <!-- ============ PACKAGES ============ -->
 <section id="packages" class="packages-section">
   <div class="wrap">
-    <div class="eyebrow">Coaching Packages</div>
-    <h2>Find the Support That Fits.</h2>
+    <div class="eyebrow" data-i18n="pk.eyebrow">Coaching Packages</div>
+    <h2 data-i18n="pk.h2">Find the Support That Fits.</h2>
 
-    <p style="max-width: 560px;">Every journey is personal, so pricing and scheduling details are shared directly rather than listed here. Reach out by email and I'll walk you through what fits best.</p>
+    <p style="max-width: 560px;" data-i18n="pk.intro">Every journey is personal, so pricing and scheduling details are shared directly rather than listed here. Reach out by email and I'll walk you through what fits best.</p>
 
     <div class="package-grid three-col">
       <div class="package-card">
-        <div class="package-eyebrow">A Single Conversation</div>
-        <div class="package-title">One-Off Session</div>
-        <div class="package-tagline">1 session · online or in Berlin</div>
+        <div class="package-eyebrow" data-i18n="pk1.eyebrow">A Single Conversation</div>
+        <div class="package-title" data-i18n="pk1.title">One-Off Session</div>
+        <div class="package-tagline" data-i18n="pk1.tagline">1 session · online or in Berlin</div>
         <ul class="package-list">
-          <li>A single 60–75 min coaching or counseling session</li>
-          <li>For an immediate concern or a one-time check-in</li>
-          <li>Ideal if you're already working with me or need focused support once</li>
-          <li>Faith-integrated approach</li>
+          <li data-i18n="pk1.li1">A single 60–75 min coaching or counseling session</li>
+          <li data-i18n="pk1.li2">For an immediate concern or a one-time check-in</li>
+          <li data-i18n="pk1.li3">Ideal if you're already working with me or need focused support once</li>
+          <li data-i18n="pk1.li4">Faith-integrated approach</li>
         </ul>
-        <p class="package-note">Details & pricing shared via email.</p>
-        <a href="#connect" class="btn package-btn">Book a Session</a>
+        <p class="package-note" data-i18n="pk.note">Details & pricing shared via email.</p>
+        <a href="#connect" class="btn package-btn" data-i18n="pk1.btn">Book a Session</a>
       </div>
 
       <div class="package-card">
-        <div class="package-eyebrow">Focused Support</div>
-        <div class="package-title">Find Your Ground</div>
-        <div class="package-tagline">6 weeks · weekly sessions</div>
+        <div class="package-eyebrow" data-i18n="pk2.eyebrow">Focused Support</div>
+        <div class="package-title" data-i18n="pk2.title">Find Your Ground</div>
+        <div class="package-tagline" data-i18n="pk2.tagline">6 weeks · weekly sessions</div>
         <ul class="package-list">
-          <li>6 weekly 1:1 sessions (60–75 min)</li>
-          <li>Online or in-person in Berlin</li>
-          <li>A clear focus defined in Session 1</li>
-          <li>Faith-integrated, intercultural approach</li>
-          <li>A simple action plan to carry forward</li>
+          <li data-i18n="pk2.li1">6 weekly 1:1 sessions (60–75 min)</li>
+          <li data-i18n="pk.online">Online or in-person in Berlin</li>
+          <li data-i18n="pk2.li3">A clear focus defined in Session 1</li>
+          <li data-i18n="pk.faith">Faith-integrated, intercultural approach</li>
+          <li data-i18n="pk2.li5">A simple action plan to carry forward</li>
         </ul>
-        <p class="package-note">Details & pricing shared via email.</p>
-        <a href="#connect" class="btn package-btn">Start Here</a>
+        <p class="package-note" data-i18n="pk.note">Details & pricing shared via email.</p>
+        <a href="#connect" class="btn package-btn" data-i18n="pk2.btn">Start Here</a>
       </div>
 
       <div class="package-card featured">
-        <div class="featured-tag">Signature Journey</div>
-        <div class="package-eyebrow">Deep Transformation</div>
-        <div class="package-title">Roots & Wings</div>
-        <div class="package-tagline">12 weeks · weekly sessions</div>
+        <div class="featured-tag" data-i18n="pk3.tag">Signature Journey</div>
+        <div class="package-eyebrow" data-i18n="pk3.eyebrow">Deep Transformation</div>
+        <div class="package-title" data-i18n="pk3.title">Roots & Wings</div>
+        <div class="package-tagline" data-i18n="pk3.tagline">12 weeks · weekly sessions</div>
         <ul class="package-list">
-          <li>12 weekly 1:1 sessions (60–75 min)</li>
-          <li>Online or in-person in Berlin</li>
-          <li>WhatsApp / email support between sessions</li>
-          <li>Guided through all three phases: stand firm, (re)build, live fully</li>
-          <li>Faith-integrated, intercultural approach</li>
-          <li>Closing reflection session to anchor your growth</li>
+          <li data-i18n="pk3.li1">12 weekly 1:1 sessions (60–75 min)</li>
+          <li data-i18n="pk.online">Online or in-person in Berlin</li>
+          <li data-i18n="pk3.li3">WhatsApp / email support between sessions</li>
+          <li data-i18n="pk3.li4">Guided through all three phases: stand firm, (re)build, live fully</li>
+          <li data-i18n="pk.faith">Faith-integrated, intercultural approach</li>
+          <li data-i18n="pk3.li6">Closing reflection session to anchor your growth</li>
         </ul>
-        <p class="package-note">Details & pricing shared via email.</p>
-        <a href="#connect" class="btn package-btn">Begin the Journey</a>
+        <p class="package-note" data-i18n="pk.note">Details & pricing shared via email.</p>
+        <a href="#connect" class="btn package-btn" data-i18n="pk3.btn">Begin the Journey</a>
       </div>
     </div>
   </div>
@@ -690,29 +710,29 @@
 <!-- ============ OTHER SERVICES ============ -->
 <section id="other-services" class="services-section">
   <div class="wrap">
-    <div class="eyebrow">Beyond 1:1 Coaching</div>
-    <h2>Other Services</h2>
+    <div class="eyebrow" data-i18n="sv.eyebrow">Beyond 1:1 Coaching</div>
+    <h2 data-i18n="sv.h2">Other Services</h2>
 
-    <p style="max-width: 560px;">Alongside coaching, I support women and international communities in Germany through workshops, speaking engagements, and multilingual ceremonies.</p>
+    <p style="max-width: 560px;" data-i18n="sv.intro">Alongside coaching, I support women and international communities in Germany through workshops, speaking engagements, and multilingual ceremonies.</p>
 
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-title">Monthly Workshops</div>
-        <p>Group sessions (2–2.5 hours), online and in Berlin, exploring themes like identity, faith, and intercultural life in community with other women.</p>
-        <div class="service-highlight">📅 Save the date: 'Starting Strong: With the Right Foundation' in January. Email for details and to be added to the list.</div>
-        <a href="mailto:maripilizickler@gmail.com?subject=Workshop%20Interest" class="btn btn-ghost">Details via email</a>
+        <div class="service-title" data-i18n="sv1.title">Monthly Workshops</div>
+        <p data-i18n="sv1.text">Group sessions (2–2.5 hours), online and in Berlin, exploring themes like identity, faith, and intercultural life in community with other women.</p>
+        <div class="service-highlight" data-i18n="sv1.highlight">📅 Save the date: 'Starting Strong: With the Right Foundation' in January. Email for details and to be added to the list.</div>
+        <a data-mailto="workshop" href="mailto:maripilizickler@gmail.com?subject=Workshop%20Interest" class="btn btn-ghost" data-i18n="sv.details">Details via email</a>
       </div>
 
       <div class="service-card">
-        <div class="service-title">Speaking &amp; Seminars</div>
-        <p>Keynotes, seminars, and workshop sessions for conferences, churches, and women's events, in English, German, and Spanish.</p>
-        <a href="mailto:maripilizickler@gmail.com?subject=Speaking%20Inquiry" class="btn btn-ghost">Details via email</a>
+        <div class="service-title" data-i18n="sv2.title">Speaking &amp; Seminars</div>
+        <p data-i18n="sv2.text">Keynotes, seminars, and workshop sessions for conferences, churches, and women's events, in English, German, and Spanish.</p>
+        <a data-mailto="speaking" href="mailto:maripilizickler@gmail.com?subject=Speaking%20Inquiry" class="btn btn-ghost" data-i18n="sv.details">Details via email</a>
       </div>
 
       <div class="service-card">
-        <div class="service-title">Wedding &amp; Memorial Officiant</div>
-        <p>Wedding and farewell ceremonies grounded in Christian faith and shaped by my pastoral training. I listen to your story and write words that are personal and true to you, in German, English and Spanish.</p>
-        <a href="mailto:maripilizickler@gmail.com?subject=Officiant%20Inquiry" class="btn btn-ghost">Details via email</a>
+        <div class="service-title" data-i18n="sv3.title">Wedding &amp; Memorial Officiant</div>
+        <p data-i18n="sv3.text">Wedding and farewell ceremonies grounded in Christian faith and shaped by my pastoral training. I listen to your story and write words that are personal and true to you, in German, English and Spanish.</p>
+        <a data-mailto="officiant" href="mailto:maripilizickler@gmail.com?subject=Officiant%20Inquiry" class="btn btn-ghost" data-i18n="sv.details">Details via email</a>
       </div>
     </div>
   </div>
@@ -721,25 +741,361 @@
 <!-- ============ CONNECT (linktree-style) ============ -->
 <section id="connect" class="links-section">
   <div class="wrap">
-    <div class="eyebrow">Let's Connect</div>
-    <h2>Ready to take the first step?</h2>
-    <p>A free discovery video call is the easiest way to begin. No pressure, just a conversation.</p>
+    <div class="eyebrow" data-i18n="cn.eyebrow">Let's Connect</div>
+    <h2 data-i18n="cn.h2">Ready to take the first step?</h2>
+    <p data-i18n="cn.p">A free discovery video call is the easiest way to begin. No pressure, just a conversation.</p>
 
     <div class="link-stack">
-      <a href="mailto:maripilizickler@gmail.com?subject=Discovery%20Call%20Request&body=Name%3A%0ALastname%3A%0APhone%20number%3A%0AMain%20reason%20%2F%20area%20I%27d%20like%20to%20talk%20about%3A%0A" class="link-btn">📅 Book a Free Discovery Video Call</a>
-      <a href="mailto:maripilizickler@gmail.com?subject=One-Off%20Counseling%20Session%20Request&body=Name%3A%0ALastname%3A%0APhone%20number%3A%0AMain%20reason%20%2F%20area%20of%20counseling%3A%0A" class="link-btn">🕊️ Book a One-Off Counseling Session</a>
-      <a href="https://www.instagram.com/pilar.coaching/" target="_blank" rel="noopener" class="link-btn">📸 Follow on Instagram</a>
-      <a href="mailto:maripilizickler@gmail.com" class="link-btn">✉️ Send an Email</a>
+      <a data-mailto="discovery" href="mailto:maripilizickler@gmail.com?subject=Discovery%20Call%20Request&body=Name%3A%0ALastname%3A%0APhone%20number%3A%0AMain%20reason%20%2F%20area%20I%27d%20like%20to%20talk%20about%3A%0A" class="link-btn" data-i18n="cn.link1">📅 Book a Free Discovery Video Call</a>
+      <a data-mailto="oneoff" href="mailto:maripilizickler@gmail.com?subject=One-Off%20Counseling%20Session%20Request&body=Name%3A%0ALastname%3A%0APhone%20number%3A%0AMain%20reason%20%2F%20area%20of%20counseling%3A%0A" class="link-btn" data-i18n="cn.link2">🕊️ Book a One-Off Counseling Session</a>
+      <a href="https://www.instagram.com/pilar.coaching/" target="_blank" rel="noopener" class="link-btn" data-i18n="cn.link3">📸 Follow on Instagram</a>
+      <a href="mailto:maripilizickler@gmail.com" class="link-btn" data-i18n="cn.link4">✉️ Send an Email</a>
     </div>
 
-    <div class="lang-flags">🇬🇧 English &nbsp;·&nbsp; 🇩🇪 Deutsch &nbsp;·&nbsp; 🇪🇸 Español</div>
   </div>
 </section>
 
 <footer>
-  <p class="footer-disclaimer">Coaching is not a substitute for psychotherapy or medical treatment. For concerns beyond the scope of coaching, I refer clients to appropriate professionals.</p>
-  PILAR COACHING · BERLIN &amp; ONLINE · © 2026
+  <p class="footer-disclaimer" data-i18n="ft.disclaimer">Coaching is not a substitute for psychotherapy or medical treatment. For concerns beyond the scope of coaching, I refer clients to appropriate professionals.</p>
+  <div data-i18n="ft.line">PILAR COACHING · BERLIN &amp; ONLINE · © 2026</div>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" class="lang-btn active" data-set-lang="en" lang="en" aria-pressed="true">🇬🇧 English</button>
+    <button type="button" class="lang-btn" data-set-lang="de" lang="de" aria-pressed="false">🇩🇪 Deutsch</button>
+    <button type="button" class="lang-btn" data-set-lang="es" lang="es" aria-pressed="false">🇪🇸 Español</button>
+  </div>
 </footer>
+
+<script>
+(function () {
+  var T = {
+  "de": {
+    "nav.about": "Über mich",
+    "nav.journey": "Der Weg",
+    "nav.packages": "Pakete",
+    "nav.services": "Weitere Angebote",
+    "nav.connect": "Kontakt",
+    "hero.headline": "<em>Standhaft</em> bleiben. <em>Neu</em> beginnen.<br><em>Voll</em> leben.",
+    "hero.sub": "Glaubensbasiertes Life-Coaching für Frauen in den großen Umbrüchen des Lebens, mit Maripili Zickler, in Berlin &amp; online.",
+    "hero.cta1": "Coaching-Pakete ansehen",
+    "cta.discovery": "Kostenloses Kennenlerngespräch per Video buchen",
+    "hero.scroll": "SCROLLEN ↓",
+    "about.eyebrow": "Über Maripili",
+    "about.h2": "Eine verlässliche Begleiterin für Frauen mitten im Wandel.",
+    "about.lead": "Ich weiß, wie es sich anfühlt, neu aufzubauen: nicht nur einmal, sondern immer wieder. Kulturen zu wechseln, eine Familie durch Veränderungen zusammenzuhalten, schwierige Fragen zu Glauben und Identität zu stellen und trotzdem stehen zu bleiben.",
+    "about.p1": "Mein eigener Weg hat mich durch Umzüge, Mutterschaft und all jene Übergänge, Wendungen und Herausforderungen geführt, die das Leben uns leise in die Hände legt. Dabei habe ich entdeckt, dass gerade die Momente, die sich am orientierungslosesten anfühlten, mir am meisten darüber beigebracht haben, was es heißt, standhaft zu bleiben und neu zu beginnen.",
+    "about.p2": "In jeder dieser Zeiten war mein Glaube meine Kraftquelle: der feste Boden unter der sich wandelnden Landschaft und der Grund, warum ich darauf vertraue, dass Veränderung zu etwas Gutem führen kann.",
+    "about.p3": "Das ist die Arbeit, die ich heute mit anderen Frauen tue. Nicht als Frau, die alles im Griff hat, sondern als Frau, die selbst echte Umbrüche durchlebt hat und weiß, wie sie dich auf deinem Weg begleiten kann.",
+    "about.p4": "PILAR bedeutet auf Spanisch 'Säule', und es ist auch mein zweiter Vorname. Beide Bedeutungen fassen zusammen, was ich anbieten möchte: verlässlichen Halt, gewachsen aus meiner eigenen Geschichte.",
+    "cred.label": "Ausbildung &amp; Hintergrund",
+    "cred.disc": "DISC-zertifizierte Trainerin",
+    "cred.pastoral": "Pastorale Ausbildung",
+    "cred.missions": "Interkulturelle Missionsausbildung",
+    "cred.counseling": "Ausbildung in Beratung",
+    "cred.berlin": "Mit Sitz in Berlin, international tätig",
+    "personal.label": "Persönlich",
+    "personal.line": "Ursprünglich aus Ecuador · Seit über 20 Jahren in Deutschland · Mutter von drei Kindern · In einer interkulturellen Ehe · Fließend in Spanisch, Deutsch &amp; Englisch",
+    "journey.eyebrow": "Der PILAR-Ansatz",
+    "journey.h2": "Drei Phasen. Ein beständiger Weg nach vorn.",
+    "ph1.word": "Standhaft<br>bleiben",
+    "ph1.title": "Finde festen Boden",
+    "ph1.text": "Bevor sich etwas weiterbewegt, werden wir langsamer. Wir benennen, was wirklich geschieht, geben dir wieder festen Stand und verbinden dich neu mit dem, was wahr ist: über deine Umstände, deinen Glauben und dich selbst.",
+    "ph2.word": "Neu<br>beginnen",
+    "ph2.title": "(Neu) aufbauen mit Absicht",
+    "ph2.text": "Das ist die aktive Arbeit: Identität, Beziehungen, Beruf oder Glauben mit Klarheit neu gestalten, statt nur auf die Umstände zu reagieren. Veränderung wird zu etwas, das du wählst, nicht nur zu etwas, das du überstehst.",
+    "ph3.word": "Voll<br>leben",
+    "ph3.title": "Wachse in die Frau hinein, die du wirst",
+    "ph3.text": "Das Ziel war nie nur, durchzuhalten. Es geht darum, mit Sinn, Freiheit und Glauben auf der anderen Seite des Übergangs zu leben, ganz gegenwärtig in dem Leben, das du dir aufbaust.",
+    "for.eyebrow": "Für wen das ist",
+    "for.h2": "Für Frauen in den Übergängen, Herausforderungen &amp; Wendungen des Lebens.",
+    "for.p": "Das Leben verlangt von uns öfter, als wir erwarten, jemand Neues zu werden. Ein Umzug, ein Baby, ein Verlust, ein neues Kapitel: Jedes davon verschiebt leise, wer du bist. Vielleicht hast du dafür noch keinen Namen, und du brauchst auch keinen. Wenn dir etwas davon vertraut vorkommt, sollten wir sprechen.",
+    "for.1": "Neuanfang in einem neuen Land",
+    "for.2": "Das Gefühl, nirgends ganz dazuzugehören",
+    "for.3": "Identität im Wandel durch Mutterschaft",
+    "for.4": "Berufswechsel oder Neuerfindung",
+    "for.5": "Wiedereinstieg nach einem Umzug oder einer Zeit im Ausland",
+    "for.6": "Scheidung oder das Ende einer Beziehung",
+    "for.7": "Interkulturelle Beziehungen &amp; Elternschaft",
+    "for.8": "Glaube &amp; Lebenssinn",
+    "pk.eyebrow": "Coaching-Pakete",
+    "pk.h2": "Finde die Begleitung, die zu dir passt.",
+    "pk.intro": "Jeder Weg ist persönlich. Deshalb teile ich Preise und Terminmöglichkeiten direkt mit, statt sie hier aufzulisten. Schreib mir eine E-Mail, und ich erkläre dir, was am besten passt.",
+    "pk.note": "Details &amp; Preise per E-Mail.",
+    "pk.online": "Online oder persönlich in Berlin",
+    "pk.faith": "Glaubensintegrierter, interkultureller Ansatz",
+    "pk1.eyebrow": "Ein einzelnes Gespräch",
+    "pk1.title": "Einzelsitzung",
+    "pk1.tagline": "1 Sitzung · online oder in Berlin",
+    "pk1.li1": "Eine einzelne Coaching- oder Beratungssitzung (60–75 Min.)",
+    "pk1.li2": "Für ein akutes Anliegen oder einen einmaligen Check-in",
+    "pk1.li3": "Ideal, wenn du schon mit mir arbeitest oder einmalig gezielte Unterstützung brauchst",
+    "pk1.li4": "Glaubensintegrierter Ansatz",
+    "pk1.btn": "Sitzung buchen",
+    "pk2.eyebrow": "Gezielte Begleitung",
+    "pk2.title": "Finde festen Boden",
+    "pk2.tagline": "6 Wochen · wöchentliche Sitzungen",
+    "pk2.li1": "6 wöchentliche Einzelsitzungen (60–75 Min.)",
+    "pk2.li3": "Ein klarer Fokus, festgelegt in Sitzung 1",
+    "pk2.li5": "Ein einfacher Aktionsplan für den Weg danach",
+    "pk2.btn": "Hier beginnen",
+    "pk3.tag": "Signature-Weg",
+    "pk3.eyebrow": "Tiefgreifende Veränderung",
+    "pk3.title": "Wurzeln &amp; Flügel",
+    "pk3.tagline": "12 Wochen · wöchentliche Sitzungen",
+    "pk3.li1": "12 wöchentliche Einzelsitzungen (60–75 Min.)",
+    "pk3.li3": "WhatsApp- / E-Mail-Begleitung zwischen den Sitzungen",
+    "pk3.li4": "Begleitung durch alle drei Phasen: standhaft bleiben, (neu) aufbauen, voll leben",
+    "pk3.li6": "Abschlussreflexion, die dein Wachstum verankert",
+    "pk3.btn": "Die Reise beginnen",
+    "sv.eyebrow": "Mehr als Einzelcoaching",
+    "sv.h2": "Weitere Angebote",
+    "sv.intro": "Neben dem Coaching begleite ich Frauen und internationale Gemeinschaften in Deutschland durch Workshops, Vorträge und mehrsprachige Zeremonien.",
+    "sv1.title": "Monatliche Workshops",
+    "sv1.text": "Gruppensitzungen (2–2,5 Stunden), online und in Berlin, zu Themen wie Identität, Glaube und interkulturelles Leben, in Gemeinschaft mit anderen Frauen.",
+    "sv1.highlight": "📅 Termin vormerken: 'Stark starten: Mit dem richtigen Fundament' im Januar. Schreib mir für Details und um auf die Liste zu kommen.",
+    "sv.details": "Details per E-Mail",
+    "sv2.title": "Vorträge &amp; Seminare",
+    "sv2.text": "Keynotes, Seminare und Workshop-Einheiten für Konferenzen, Gemeinden und Frauenveranstaltungen, auf Englisch, Deutsch und Spanisch.",
+    "sv3.title": "Trauungen &amp; Trauerfeiern",
+    "sv3.text": "Hochzeits- und Abschiedszeremonien, die im christlichen Glauben gegründet und von meiner pastoralen Ausbildung geprägt sind. Ich höre deiner Geschichte zu und schreibe Worte, die persönlich und wahrhaftig für dich sind, auf Deutsch, Englisch und Spanisch.",
+    "cn.eyebrow": "Lass uns in Kontakt treten",
+    "cn.h2": "Bereit für den ersten Schritt?",
+    "cn.p": "Ein kostenloses Kennenlerngespräch per Video ist der einfachste Einstieg. Ohne Druck, einfach ein Gespräch.",
+    "cn.link1": "📅 Kostenloses Kennenlerngespräch per Video buchen",
+    "cn.link2": "🕊️ Einzelne Beratungssitzung buchen",
+    "cn.link3": "📸 Auf Instagram folgen",
+    "cn.link4": "✉️ E-Mail senden",
+    "ft.disclaimer": "Coaching ersetzt keine Psychotherapie und keine medizinische Behandlung. Bei Anliegen, die über den Rahmen des Coachings hinausgehen, verweise ich Klientinnen und Klienten an geeignete Fachpersonen.",
+    "ft.line": "PILAR COACHING · BERLIN &amp; ONLINE · © 2026",
+    "meta.title": "PILAR Coaching: Standhaft bleiben. Neu beginnen. Voll leben."
+  },
+  "es": {
+    "nav.about": "Sobre mí",
+    "nav.journey": "El camino",
+    "nav.packages": "Paquetes",
+    "nav.services": "Otros servicios",
+    "nav.connect": "Contacto",
+    "hero.headline": "<em>Mantente</em> firme. <em>Vuelve</em> a empezar.<br><em>Vive</em> plenamente.",
+    "hero.sub": "Coaching de vida basado en la fe para mujeres que atraviesan las grandes transiciones de la vida, con Maripili Zickler, en Berlín y online.",
+    "hero.cta1": "Ver paquetes de coaching",
+    "cta.discovery": "Reservar una videollamada de descubrimiento gratuita",
+    "hero.scroll": "DESLIZA ↓",
+    "about.eyebrow": "Sobre Maripili",
+    "about.h2": "Una presencia firme para mujeres en medio del cambio.",
+    "about.lead": "Sé lo que se siente al reconstruirse: no una vez, sino muchas. Cambiar de cultura, mantener unida a una familia a través del cambio, hacerse preguntas difíciles sobre la fe y la identidad, y seguir en pie.",
+    "about.p1": "Mi propio camino me ha llevado por mudanzas, la maternidad y esa clase de transiciones, giros y desafíos que la vida nos pone silenciosamente en las manos. En el camino descubrí que los momentos que más me desorientaron fueron también los que más me enseñaron sobre lo que significa mantenerse firme y volver a empezar.",
+    "about.p2": "En cada una de esas etapas, mi fe ha sido mi fuente de fortaleza: el suelo firme bajo un paisaje cambiante y la razón por la que confío en que la transición puede llevar a algo bueno.",
+    "about.p3": "Ese es el trabajo que hoy hago con otras mujeres. No como alguien que lo tiene todo resuelto, sino como alguien que ha atravesado transiciones reales y sabe cómo acompañarte en la tuya.",
+    "about.p4": "PILAR significa 'pilar', una columna que sostiene, y también es mi segundo nombre. Ambos significados resumen lo que espero ofrecer: un apoyo firme sobre el cual sostenerte, nacido de mi propia historia.",
+    "cred.label": "Formación y trayectoria",
+    "cred.disc": "Formadora certificada en DISC",
+    "cred.pastoral": "Formación pastoral",
+    "cred.missions": "Formación en misiones interculturales",
+    "cred.counseling": "Formación en consejería",
+    "cred.berlin": "Con base en Berlín, trabajando a nivel internacional",
+    "personal.label": "A nivel personal",
+    "personal.line": "Originaria de Ecuador · Más de 20 años viviendo en Alemania · Madre de tres · En un matrimonio intercultural · Español, alemán e inglés con fluidez",
+    "journey.eyebrow": "El enfoque PILAR",
+    "journey.h2": "Tres fases. Un camino firme hacia adelante.",
+    "ph1.word": "Mantente<br>firme",
+    "ph1.title": "Encuentra tu suelo firme",
+    "ph1.text": "Antes de que algo avance, bajamos el ritmo. Nombramos lo que realmente está pasando, afirmamos tu paso y te reconectamos con lo que es verdadero sobre tus circunstancias, tu fe y tú misma.",
+    "ph2.word": "Vuelve a<br>empezar",
+    "ph2.title": "(Re)construye con intención",
+    "ph2.text": "Este es el trabajo activo: remodelar la identidad, las relaciones, la carrera o la fe con claridad, en lugar de reaccionar a las circunstancias. El cambio se convierte en algo que eliges, no solo en algo que sobrevives.",
+    "ph3.word": "Vive<br>plenamente",
+    "ph3.title": "Entra en quien estás llegando a ser",
+    "ph3.text": "La meta nunca fue solo sobrellevar. Es vivir con propósito, libertad y fe al otro lado de la transición, plenamente presente en la vida que estás construyendo.",
+    "for.eyebrow": "Para quién es",
+    "for.h2": "Para mujeres que atraviesan las transiciones, los desafíos y los giros de la vida.",
+    "for.p": "La vida nos pide convertirnos en alguien nuevo con más frecuencia de lo que esperamos. Una mudanza, un bebé, una pérdida, un nuevo capítulo: cada uno cambia silenciosamente quién eres. Quizás todavía no tengas un nombre para eso, y no lo necesitas. Si algo de esto te resulta familiar, deberíamos hablar.",
+    "for.1": "Empezar de nuevo en un país nuevo",
+    "for.2": "Sentir que no perteneces del todo a ningún lugar",
+    "for.3": "La identidad que cambia con la maternidad",
+    "for.4": "Cambio de carrera o reinvención",
+    "for.5": "Readaptación tras una mudanza o un tiempo en el extranjero",
+    "for.6": "Divorcio o el fin de una relación",
+    "for.7": "Relaciones interculturales y crianza",
+    "for.8": "Fe y propósito",
+    "pk.eyebrow": "Paquetes de coaching",
+    "pk.h2": "Encuentra el acompañamiento que se ajusta a ti.",
+    "pk.intro": "Cada camino es personal, por eso comparto los precios y la disponibilidad directamente en lugar de listarlos aquí. Escríbeme un correo y te explicaré qué se ajusta mejor a ti.",
+    "pk.note": "Detalles y precios por correo electrónico.",
+    "pk.online": "En línea o presencial en Berlín",
+    "pk.faith": "Enfoque intercultural que integra la fe",
+    "pk1.eyebrow": "Una sola conversación",
+    "pk1.title": "Sesión individual",
+    "pk1.tagline": "1 sesión · online o en Berlín",
+    "pk1.li1": "Una sola sesión de coaching o consejería (60–75 min)",
+    "pk1.li2": "Para una preocupación inmediata o un chequeo puntual",
+    "pk1.li3": "Ideal si ya trabajas conmigo o necesitas apoyo enfocado una sola vez",
+    "pk1.li4": "Enfoque que integra la fe",
+    "pk1.btn": "Reservar una sesión",
+    "pk2.eyebrow": "Apoyo enfocado",
+    "pk2.title": "Encuentra tu suelo firme",
+    "pk2.tagline": "6 semanas · sesiones semanales",
+    "pk2.li1": "6 sesiones individuales semanales (60–75 min)",
+    "pk2.li3": "Un enfoque claro, definido en la sesión 1",
+    "pk2.li5": "Un plan de acción sencillo para seguir adelante",
+    "pk2.btn": "Empieza aquí",
+    "pk3.tag": "Camino insignia",
+    "pk3.eyebrow": "Transformación profunda",
+    "pk3.title": "Raíces y alas",
+    "pk3.tagline": "12 semanas · sesiones semanales",
+    "pk3.li1": "12 sesiones individuales semanales (60–75 min)",
+    "pk3.li3": "Apoyo por WhatsApp / correo electrónico entre sesiones",
+    "pk3.li4": "Acompañamiento a lo largo de las tres fases: mantente firme, (re)construye, vive plenamente",
+    "pk3.li6": "Sesión de reflexión final para afianzar tu crecimiento",
+    "pk3.btn": "Comenzar el viaje",
+    "sv.eyebrow": "Más allá del coaching individual",
+    "sv.h2": "Otros servicios",
+    "sv.intro": "Además del coaching, acompaño a mujeres y comunidades internacionales en Alemania a través de talleres, charlas y ceremonias multilingües.",
+    "sv1.title": "Talleres mensuales",
+    "sv1.text": "Sesiones grupales (2–2,5 horas), online y en Berlín, para explorar temas como la identidad, la fe y la vida intercultural en comunidad con otras mujeres.",
+    "sv1.highlight": "📅 Reserva la fecha: 'Empezar con fuerza: Con el fundamento correcto' en enero. Escríbeme para recibir los detalles y para que te añada a la lista.",
+    "sv.details": "Detalles por correo electrónico",
+    "sv2.title": "Charlas y seminarios",
+    "sv2.text": "Conferencias magistrales, seminarios y talleres para congresos, iglesias y eventos de mujeres, en inglés, alemán y español.",
+    "sv3.title": "Ceremonias de boda y de despedida",
+    "sv3.text": "Ceremonias de boda y de despedida fundamentadas en la fe cristiana y moldeadas por mi formación pastoral. Escucho tu historia y escribo palabras personales y fieles a quien eres, en alemán, inglés y español.",
+    "cn.eyebrow": "Conectemos",
+    "cn.h2": "¿Lista para dar el primer paso?",
+    "cn.p": "Una videollamada de descubrimiento gratuita es la forma más fácil de empezar. Sin presión, solo una conversación.",
+    "cn.link1": "📅 Reservar una videollamada de descubrimiento gratuita",
+    "cn.link2": "🕊️ Reservar una sesión individual de consejería",
+    "cn.link3": "📸 Seguir en Instagram",
+    "cn.link4": "✉️ Enviar un correo electrónico",
+    "ft.disclaimer": "El coaching no sustituye a la psicoterapia ni al tratamiento médico. Para inquietudes que van más allá del alcance del coaching, derivo a mis clientes a los profesionales adecuados.",
+    "ft.line": "PILAR COACHING · BERLÍN Y ONLINE · © 2026",
+    "meta.title": "PILAR Coaching: Mantente firme. Vuelve a empezar. Vive plenamente."
+  }
+};
+  var MAILTO = {
+  "discovery": {
+    "en": [
+      "Discovery Call Request",
+      "Name:\nLastname:\nPhone number:\nMain reason / area I'd like to talk about:\n"
+    ],
+    "de": [
+      "Anfrage Kennenlerngespräch",
+      "Vorname:\nNachname:\nTelefonnummer:\nHauptgrund / Bereich, über den ich sprechen möchte:\n"
+    ],
+    "es": [
+      "Solicitud de videollamada de descubrimiento",
+      "Nombre:\nApellido:\nNúmero de teléfono:\nMotivo principal / área sobre la que me gustaría hablar:\n"
+    ]
+  },
+  "oneoff": {
+    "en": [
+      "One-Off Counseling Session Request",
+      "Name:\nLastname:\nPhone number:\nMain reason / area of counseling:\n"
+    ],
+    "de": [
+      "Anfrage Einzelberatung",
+      "Vorname:\nNachname:\nTelefonnummer:\nHauptgrund / Bereich der Beratung:\n"
+    ],
+    "es": [
+      "Solicitud de sesión individual de consejería",
+      "Nombre:\nApellido:\nNúmero de teléfono:\nMotivo principal / área de consejería:\n"
+    ]
+  },
+  "workshop": {
+    "en": [
+      "Workshop Interest",
+      ""
+    ],
+    "de": [
+      "Interesse an Workshops",
+      ""
+    ],
+    "es": [
+      "Interés en los talleres",
+      ""
+    ]
+  },
+  "speaking": {
+    "en": [
+      "Speaking Inquiry",
+      ""
+    ],
+    "de": [
+      "Anfrage Vortrag",
+      ""
+    ],
+    "es": [
+      "Consulta sobre charlas",
+      ""
+    ]
+  },
+  "officiant": {
+    "en": [
+      "Officiant Inquiry",
+      ""
+    ],
+    "de": [
+      "Anfrage Zeremonie",
+      ""
+    ],
+    "es": [
+      "Consulta sobre ceremonias",
+      ""
+    ]
+  }
+};
+  var ADDRESS = 'maripilizickler@gmail.com';
+  var LANGS = ['en', 'de', 'es'];
+  var EN = {};
+
+  var nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function (el) {
+    var k = el.getAttribute('data-i18n');
+    if (!(k in EN)) EN[k] = el.innerHTML;
+  });
+  EN['meta.title'] = document.title;
+  T.en = EN;
+
+  var mailNodes = document.querySelectorAll('[data-mailto]');
+  var buttons = document.querySelectorAll('[data-set-lang]');
+
+  function mailHref(key, lang) {
+    var m = MAILTO[key][lang];
+    var href = 'mailto:' + ADDRESS + '?subject=' + encodeURIComponent(m[0]);
+    if (m[1]) href += '&body=' + encodeURIComponent(m[1]);
+    return href;
+  }
+
+  function setLang(lang, anchor) {
+    if (LANGS.indexOf(lang) === -1) return;
+    var before = anchor ? anchor.getBoundingClientRect().top : 0;
+
+    nodes.forEach(function (el) {
+      var v = T[lang][el.getAttribute('data-i18n')];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    mailNodes.forEach(function (el) {
+      el.setAttribute('href', mailHref(el.getAttribute('data-mailto'), lang));
+    });
+    document.title = T[lang]['meta.title'];
+    document.documentElement.lang = lang;
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-set-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    // Text lengths differ per language, so keep the clicked button where it was on screen.
+    if (anchor) {
+      var delta = anchor.getBoundingClientRect().top - before;
+      if (delta) window.scrollBy({ top: delta, left: 0, behavior: 'instant' });
+    }
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      setLang(b.getAttribute('data-set-lang'), b);
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

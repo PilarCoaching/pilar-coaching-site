@@ -74,8 +74,20 @@
     color: var(--grey);
   }
   .nav-links a:hover { color: var(--terracotta); }
+  .nav-lang {
+    display: flex;
+    gap: 2px;
+    margin-left: 20px;
+  }
+  .nav-lang .lang-btn {
+    padding: 4px 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-underline-offset: 4px;
+  }
   @media (max-width: 560px) {
     .nav-links { display: none; }
+    .nav-lang { margin-left: 0; }
   }
 
   /* ============ HERO / SEAL ============ */
@@ -535,6 +547,11 @@
       <a href="#packages" data-i18n="nav.packages">Packages</a>
       <a href="#other-services" data-i18n="nav.services">Other Services</a>
       <a href="#connect" data-i18n="nav.connect">Connect</a>
+    </div>
+    <div class="nav-lang" role="group" aria-label="Language">
+      <button type="button" class="lang-btn active" data-set-lang="en" lang="en" aria-pressed="true" aria-label="English">EN</button>
+      <button type="button" class="lang-btn" data-set-lang="de" lang="de" aria-pressed="false" aria-label="Deutsch">DE</button>
+      <button type="button" class="lang-btn" data-set-lang="es" lang="es" aria-pressed="false" aria-label="Español">ES</button>
     </div>
   </div>
 </nav>
@@ -1065,6 +1082,12 @@
 
   function setLang(lang, anchor) {
     if (LANGS.indexOf(lang) === -1) return;
+    if (anchor && anchor.closest('nav')) {
+      var navH = document.querySelector('nav').offsetHeight;
+      anchor = Array.prototype.find.call(document.querySelectorAll('.hero, section'), function (el) {
+        return el.getBoundingClientRect().bottom > navH + 1;
+      }) || null;
+    }
     var before = anchor ? anchor.getBoundingClientRect().top : 0;
 
     nodes.forEach(function (el) {
